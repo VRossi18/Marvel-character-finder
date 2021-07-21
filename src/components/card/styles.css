@@ -1,0 +1,33 @@
+
+div#card {
+    display: flex;
+    margin: 1%;
+    width: 100%;
+    align-items: center;
+    height: min-content;
+    border-radius: 2px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color: #EE171F;
+    transition: 0.5s;
+}
+
+div#card:hover {
+    background-color: #9c1015;
+    cursor: pointer;
+}
+
+div#card label {
+    margin-left: 2%;
+    color: white;
+    padding: 0.5%;
+    font-family: 'Marvel', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+div#card img {
+    width: 7%;
+    height: 7%;
+    padding: 2px;
+}
