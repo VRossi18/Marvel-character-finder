@@ -39,6 +39,7 @@ function App() {
 
   const search = async () => {
     const characterByName = await service.getCharacterByName(name)
+    setName("")
     setCharacters(characterByName.data.results)
   }
 
@@ -58,13 +59,19 @@ function App() {
     setLoading(false)
   }
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.key === "Enter") {
+      search()
+    }
+  }
+
 
   return (
     <div>
       <Header/>
       <div id='search-container'>
         <input id="search-bar" value={name} placeholder="Procure por um nome de personagem" onChange={changeCharacters}/>
-        <button onClick={search}><FaSearch/></button>
+        <button onClick={search} ><FaSearch/></button>
       </div>
       <div id="main-body">
         <div>
